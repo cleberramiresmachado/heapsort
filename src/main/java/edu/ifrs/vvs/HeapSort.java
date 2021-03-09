@@ -82,7 +82,7 @@ public class HeapSort {
         int size = this.size();
         int[] values = new int[size];
         for (int i = 0; i < values.length; i++) {
-            System.out.print("Value " + i + ": ");
+            System.out.print("Value " + i + ": "); //NOPMD
             values[i] = Integer.valueOf(this.scanner.next());
         }
         return values;
@@ -94,7 +94,7 @@ public class HeapSort {
      * @return the size of the array
      */
     private int size() {
-        System.out.print("Size of array: ");
+        System.out.print("Size of array: "); //NOPMD
         int size = Integer.valueOf(this.scanner.next());
         return size;
     }
@@ -106,7 +106,7 @@ public class HeapSort {
      */
     public void show(int... values) {
         for (int num : values) {
-            System.out.print(num + " ");
+            System.out.print(num + " "); //NOPMD
         }
     }
 }

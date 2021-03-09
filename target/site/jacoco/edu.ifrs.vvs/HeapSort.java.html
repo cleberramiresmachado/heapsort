@@ -82,7 +82,7 @@ import java.util.Scanner;
 <span class="nc" id="L82">        int size = this.size();</span>
 <span class="nc" id="L83">        int[] values = new int[size];</span>
 <span class="nc bnc" id="L84" title="All 2 branches missed.">        for (int i = 0; i &lt; values.length; i++) {</span>
-<span class="nc" id="L85">            System.out.print(&quot;Value &quot; + i + &quot;: &quot;);</span>
+<span class="nc" id="L85">            System.out.print(&quot;Value &quot; + i + &quot;: &quot;); //NOPMD</span>
 <span class="nc" id="L86">            values[i] = Integer.valueOf(this.scanner.next());</span>
         }
 <span class="nc" id="L88">        return values;</span>
@@ -94,7 +94,7 @@ import java.util.Scanner;
      * @return the size of the array
      */
     private int size() {
-<span class="nc" id="L97">        System.out.print(&quot;Size of array: &quot;);</span>
+<span class="nc" id="L97">        System.out.print(&quot;Size of array: &quot;); //NOPMD</span>
 <span class="nc" id="L98">        int size = Integer.valueOf(this.scanner.next());</span>
 <span class="nc" id="L99">        return size;</span>
     }
@@ -106,7 +106,7 @@ import java.util.Scanner;
      */
     public void show(int... values) {
 <span class="nc bnc" id="L108" title="All 2 branches missed.">        for (int num : values) {</span>
-<span class="nc" id="L109">            System.out.print(num + &quot; &quot;);</span>
+<span class="nc" id="L109">            System.out.print(num + &quot; &quot;); //NOPMD</span>
         }
 <span class="nc" id="L111">    }</span>
 }
