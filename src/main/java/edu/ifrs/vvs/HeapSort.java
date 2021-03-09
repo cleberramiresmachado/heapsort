@@ -29,8 +29,6 @@ public class HeapSort {
     /**
      * Método que ordena um vetor de inteiros utilizando o algoritmo de Heap Sort.
      *
-     * http://www.universidadejava.com.br/pesquisa_ordenacao/heapS-sort/
-     *
      * @param v - Vetor que será ordenado.
      */
     public void sort(int... v) {
