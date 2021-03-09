@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HeapSort.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">heapsort</a> &gt; <a href="index.source.html" class="el_package">edu.ifrs.vvs</a> &gt; <span class="el_source">HeapSort.java</span></div><h1>HeapSort.java</h1><pre class="source lang-java linenums">/**
  * @License
  * Copyright 2021 Heap Sort Application
- *
  * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
  * http://www.apache.org/licenses/LICENSE-2.0
+ */
+/**
  * https://pt.wikipedia.org/wiki/Heapsort
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
@@ -24,7 +24,10 @@ import java.util.Scanner;
  */
 <span class="fc" id="L25">public class HeapSort {</span>
 
-<span class="fc" id="L27">    private Scanner scanner = new Scanner(System.in);</span>
+    /**
+     * Scanner.
+     */
+<span class="fc" id="L30">    private Scanner scanner = new Scanner(System.in);</span>
 
     /**
      * Método que ordena um vetor de inteiros utilizando o algoritmo de Heap Sort.
@@ -35,38 +38,38 @@ import java.util.Scanner;
         /**
          * While utilizado para ordenar o vetor
          */
-<span class="fc" id="L38">        int tamanho = v.length;</span>
-<span class="fc" id="L39">        int i = tamanho / 2;</span>
-<span class="fc" id="L40">        int pai = 0;</span>
-<span class="fc" id="L41">        int filho = 0;</span>
-<span class="fc" id="L42">        int t = 0;</span>
+<span class="fc" id="L41">        int tamanho = v.length;</span>
+<span class="fc" id="L42">        int i = tamanho / 2;</span>
+<span class="fc" id="L43">        int pai = 0;</span>
+<span class="fc" id="L44">        int filho = 0;</span>
+<span class="fc" id="L45">        int t = 0;</span>
         while (true) {
-<span class="fc bfc" id="L44" title="All 2 branches covered.">            if (i &gt; 0) {</span>
-<span class="fc" id="L45">                i--;</span>
-<span class="fc" id="L46">                t = v[i];</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            if (i &gt; 0) {</span>
+<span class="fc" id="L48">                i--;</span>
+<span class="fc" id="L49">                t = v[i];</span>
             } else {
-<span class="fc" id="L48">                tamanho--;</span>
-<span class="fc bfc" id="L49" title="All 2 branches covered.">                if (tamanho &lt;= 0) {</span>
-<span class="fc" id="L50">                    return;</span>
+<span class="fc" id="L51">                tamanho--;</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">                if (tamanho &lt;= 0) {</span>
+<span class="fc" id="L53">                    return;</span>
                 }
-<span class="fc" id="L52">                t = v[tamanho];</span>
-<span class="fc" id="L53">                v[tamanho] = v[0];</span>
+<span class="fc" id="L55">                t = v[tamanho];</span>
+<span class="fc" id="L56">                v[tamanho] = v[0];</span>
             }
-<span class="fc" id="L55">            pai = i;</span>
-<span class="fc" id="L56">            filho = (i * 2) + 1;</span>
-<span class="fc bfc" id="L57" title="All 2 branches covered.">            while (filho &lt; tamanho) {</span>
-<span class="fc bfc" id="L58" title="All 4 branches covered.">                if ((filho + 1 &lt; tamanho) &amp;&amp; (v[filho + 1] &gt; v[filho])) {</span>
-<span class="fc" id="L59">                    filho++;</span>
+<span class="fc" id="L58">            pai = i;</span>
+<span class="fc" id="L59">            filho = (i * 2) + 1;</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">            while (filho &lt; tamanho) {</span>
+<span class="fc bfc" id="L61" title="All 4 branches covered.">                if ((filho + 1 &lt; tamanho) &amp;&amp; (v[filho + 1] &gt; v[filho])) {</span>
+<span class="fc" id="L62">                    filho++;</span>
                 }
-<span class="fc bfc" id="L61" title="All 2 branches covered.">                if (v[filho] &gt; t) {</span>
-<span class="fc" id="L62">                    v[pai] = v[filho];</span>
-<span class="fc" id="L63">                    pai = filho;</span>
-<span class="fc" id="L64">                    filho = pai * 2 + 1;</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">                if (v[filho] &gt; t) {</span>
+<span class="fc" id="L65">                    v[pai] = v[filho];</span>
+<span class="fc" id="L66">                    pai = filho;</span>
+<span class="fc" id="L67">                    filho = pai * 2 + 1;</span>
                 } else {
                     break;
                 }
             }
-<span class="fc" id="L69">            v[pai] = t;</span>
+<span class="fc" id="L72">            v[pai] = t;</span>
         }
     }
 
@@ -76,13 +79,13 @@ import java.util.Scanner;
      * @return array of int
      */
     public int[] read() {
-<span class="nc" id="L79">        int size = this.size();</span>
-<span class="nc" id="L80">        int[] values = new int[size];</span>
-<span class="nc bnc" id="L81" title="All 2 branches missed.">        for (int i = 0; i &lt; values.length; i++) {</span>
-<span class="nc" id="L82">            System.out.print(&quot;Value &quot; + i + &quot;: &quot;);</span>
-<span class="nc" id="L83">            values[i] = Integer.valueOf(this.scanner.next());</span>
+<span class="nc" id="L82">        int size = this.size();</span>
+<span class="nc" id="L83">        int[] values = new int[size];</span>
+<span class="nc bnc" id="L84" title="All 2 branches missed.">        for (int i = 0; i &lt; values.length; i++) {</span>
+<span class="nc" id="L85">            System.out.print(&quot;Value &quot; + i + &quot;: &quot;);</span>
+<span class="nc" id="L86">            values[i] = Integer.valueOf(this.scanner.next());</span>
         }
-<span class="nc" id="L85">        return values;</span>
+<span class="nc" id="L88">        return values;</span>
     }
 
     /**
@@ -91,9 +94,9 @@ import java.util.Scanner;
      * @return the size of the array
      */
     private int size() {
-<span class="nc" id="L94">        System.out.print(&quot;Size of array: &quot;);</span>
-<span class="nc" id="L95">        int size = Integer.valueOf(this.scanner.next());</span>
-<span class="nc" id="L96">        return size;</span>
+<span class="nc" id="L97">        System.out.print(&quot;Size of array: &quot;);</span>
+<span class="nc" id="L98">        int size = Integer.valueOf(this.scanner.next());</span>
+<span class="nc" id="L99">        return size;</span>
     }
 
     /**
@@ -102,9 +105,9 @@ import java.util.Scanner;
      * @param values the array
      */
     public void show(int... values) {
-<span class="nc bnc" id="L105" title="All 2 branches missed.">        for (int num : values) {</span>
-<span class="nc" id="L106">            System.out.print(num + &quot; &quot;);</span>
+<span class="nc bnc" id="L108" title="All 2 branches missed.">        for (int num : values) {</span>
+<span class="nc" id="L109">            System.out.print(num + &quot; &quot;);</span>
         }
-<span class="nc" id="L108">    }</span>
+<span class="nc" id="L111">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

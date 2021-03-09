@@ -35,6 +35,12 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+  
+    <dependency>
+      <groupId>nl.elements.mobilization</groupId>
+      <artifactId>logging-api</artifactId>
+      <version>0.3.0</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>

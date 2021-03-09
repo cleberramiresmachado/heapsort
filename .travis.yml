@@ -1,5 +1,7 @@
 language: java
-jdk: openjdk8
+jdk: oraclejdk11
+script:
+  - mvn clean pmd:pmd package
 after_success:
   - mvn coveralls:report
   
