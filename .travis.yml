@@ -2,6 +2,5 @@ language: java
 jdk: oraclejdk11
 script:
   - mvn clean pmd:pmd package
-after_success:
-  - mvn coveralls:report
+
   
